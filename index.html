@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  
+  <body>
+    <h1>
+      Quer saber se você já tem idade para consumir bebidas alcoólicas?</h1>
+      <h2>Aqui
+        você descobre rapidinho! Basta preencher nosso formulário simples e
+        direto, e em poucos segundos você saberá se está liberado ou não. Nosso
+        sistema verifica automaticamente com base na sua data de nascimento sem
+        complicação e com total segurança. </h2> 
+        <p>Experimente agora!</p>
+    </h1>
+    <div id="container">
+      <input type="text" name="nome" id="nome" placeholder="Digite seu nome" />
+      <input
+        type="number"
+        name="idade"
+        id="idd"
+        placeholder="Digite sua idade"
+      />
+      <input type="button" value="Enviar" onclick="calcular()" />
+    </div>
+    <p id="res"></p>
+    <script>
+      function calcular() {
+        var nome = document.getElementById("nome").value;
+        var idd = document.getElementById("idd").value;
+        var res = document.getElementById("res");
+        if (idd >= 18) {
+          res.innerHTML = `<p>Ola ${nome}, você tem <strong>${idd},</strong> anos, é maior de idade e ja pode beber.</p>`;
+        } else {
+          res.innerHTML = `<p>Ola ${nome}, você tem <strong>${idd}</strong/> anos, é menor de idade e não pode beber</p>`;
+        }
+      }
+    </script>
+    <p>Para mais informações do criador do site clique aqui <a href="https://www.instagram.com/iurizin._/" target="_blank">Clique aqui</a></p>
+  </body>
+</html>
